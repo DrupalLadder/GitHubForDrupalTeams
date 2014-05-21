@@ -1,8 +1,8 @@
 # Summary
 
 * [Local env setup](setup/README.md)
-    * [Required](setup/required.md)
-    * [Optional](setup/optional.md)
+    * [Basic](setup/basic.md)
+    * [Advanced](setup/advanced.md)
 * [Site Developer](site-developer/README.md)
     * [Site Setup](site-developer/site-setup.md)
     * [Fork](site-developer/fork.md)
