@@ -1,0 +1,15 @@
+* [Build: QA](build/README.md)
+    * [Push changes and tag relases]()
+      pull first. (resolve any merge conflicts if there are any.)
+      push changes to rhymes repo
+      in a different copy of rhymes, tag
+    * [Update build file and buildmanager config]()
+      build.make:              projects[rhymes][tag] = 1.N+1
+      buildmanager.pt-xyz.yml: uri = /my/repo/with/my/tags/here
+    * [Rebuild and cut QA tag(s)]()
+      bmb --message="something"
+      git tag qa1
+* [Build: Prod](build/README.md)
+    * [Push changes and tag relases]()
+    * [Update build file]()
+    * [Rebuild]()
