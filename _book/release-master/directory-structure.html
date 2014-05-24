@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Drush subtree | Git Workflow for Drupal Site Development</title>
+        <title>Directory structure | Git Workflow for Drupal Site Development</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../release-master/README.html" />
+        <link rel="next" href="../release-master/prebuild.html" />
         
         
-        <link rel="prev" href="../project-maintainer/git-subtree-pull.html" />
+        <link rel="prev" href="../release-master/README.html" />
         
 
-        <meta property="og:title" content="Drush subtree | Git Workflow for Drupal Site Development">
+        <meta property="og:title" content="Directory structure | Git Workflow for Drupal Site Development">
         <meta property="og:site_name" content="Git Workflow for Drupal Site Development">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -36,7 +36,7 @@
     </head>
     <body>
         
-    <div class="book"  data-level="3.3" data-basepath=".." data-revision="1400913117281">
+    <div class="book"  data-level="4.1" data-basepath=".." data-revision="1400913117281">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -252,7 +252,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 70%;min-width: 65%;"></div>
+        <div class="inner" style="width: 80%;min-width: 75%;"></div>
     </div>
     <div class="chapters">
     
@@ -286,9 +286,9 @@
     
         <a href="../project-maintainer/drushsubtree.html" title="Drush subtree" class="chapter done " data-progress="3.3" style="left: 70%;"></a>
     
-        <a href="../release-master/README.html" title="Release master" class="chapter  new-chapter" data-progress="4" style="left: 75%;"></a>
+        <a href="../release-master/README.html" title="Release master" class="chapter done new-chapter" data-progress="4" style="left: 75%;"></a>
     
-        <a href="../release-master/directory-structure.html" title="Directory structure" class="chapter  " data-progress="4.1" style="left: 80%;"></a>
+        <a href="../release-master/directory-structure.html" title="Directory structure" class="chapter done " data-progress="4.1" style="left: 80%;"></a>
     
         <a href="../release-master/prebuild.html" title="Pre-build steps" class="chapter  " data-progress="4.2" style="left: 85%;"></a>
     
@@ -303,65 +303,14 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_5">
+                    <section class="normal" id="section-gitbook_9">
                     
-                        <h2 id="project-maintainer-drush-subtree">Project Maintainer: Drush Subtree</h2>
-<p>Simplify working with git-subtree by using Drush Subtree to help manage subtree
-projects in site repos.</p>
-<ol>
-<li><p>Download <a href="https://github.com/WhiteHouse/drushsubtree" target="_blank">Drush Subtree</a> and
-<a href="https://github.com/WhiteHouse/buildmanager" target="_blank">Build Manager</a>. Install these
-Drush extensions by placing them in you .drush folder.</p>
-</li>
-<li><p>Drush Subtree uses a Build Manager config file to keep track of which
-subtree projects should be pushed and pulled from where.
-<a href="https://github.com/DrupalLadder/_rhymessite" target="_blank">_rhymessite</a> has a 
-<a href="https://github.com/DrupalLadder/_rhymessite/blob/master/buildmanager.config.yml" target="_blank">buildmanager.config.yml</a>
-file included in the toplevel of the repo. But since you don&#39;t actually have
-push access to the repos in that config file, go ahead and create another
-one.</p>
-<pre><code> cd path/to/_rhymesite
-
- # Create a new config file named buildmanager.anything.yml.
- vim buildmanager.my-username.yml
-
- # Copy and paste the contents below into your yml config file, but
- # replace the URLs pointing to DrupalLadder&#39;s repos with URLs for your
- # own personal repos, which you have push access to.
- subtrees:
-   rhymesdistro:
-     path: docroot/profiles/rhymesdistro
-     uri: &#39;https://github.com/DrupalLadder/rhymesdistro.git&#39;
-     branch: master
-     message: &#39;rhymesdistro subtree from https://github.com/DrupalLadder/rhymesdistro.git&#39;
-   rhymes:
-     path: docroot/sites/all/modules/rhymesdistro/rhymes
-     uri: &#39;https://github.com/DrupalLadder/rhymes.git&#39;
-     branch: master
-     message: &#39;rhymes subtree from https://github.com/DrupalLadder/rhymes.git&#39;
-
- # Add your config to .gitignore so you don&#39;t accidentally commit it and
- # submit it to the _rhymessite project with a pull request.
- echo &#39;buildmanager.my-username.yml&#39; &gt;&gt; .gitignore
-</code></pre></li>
-<li><p>Now you&#39;re ready to test drive Drush Subtree.</p>
-<pre><code> # Push changes to rhymes like this.
- # If Drush Subtree detects more than one config file in
- # the repo, it will prompt you to select which one to use.
- drush subtree-push rhymes
-
- # Or push by following the interactive prompt.
- drush subtree-push
-
- # Pull the same way.
- drush subtree-pull rhymes
-
- # Drush subtree provides a wrapper around all core git-subtree commands
- # and some additional faux commands and utilities helpful for working
- # with subtrees. To see a full list of available commands do this.
- drush --filter=drushsubtree
-</code></pre></li>
-</ol>
+                        <h2 id="release-master-directory-structure">Release Master: Directory structure</h2>
+<ul>
+<li>Everything needs a home outside docroot</li>
+<li>Projects go in the projects directory</li>
+<li></li>
+</ul>
 
                     
                     </section>
@@ -371,10 +320,10 @@ one.</p>
         </div>
 
         
-        <a href="../project-maintainer/git-subtree-pull.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../release-master/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../release-master/README.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../release-master/prebuild.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

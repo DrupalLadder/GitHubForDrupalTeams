@@ -9,5 +9,5 @@ This chapter walks through:
   running with local development.
 - [Advanced setup](advanced.html): Advanced setup for project maintainers and
   release masters.
-- [Directory structure](directory-structure.html): Organize site repos to
+- [Directory structure](directory-overview.html): Organize site repos to
   minimize friction for local development and future maintenance.
