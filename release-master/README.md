@@ -1,8 +1,9 @@
 Release Master
 =============
 
-**As a release master I want to automate Drush Make builds with Build Manager,
-before deploying new stable releases to production.**
+---
+### As a release master I want to automate Drush Make builds with Build Manager, before deploying new stable releases to production.
+---
 
 This chapter covers:
   * [Directory structure](release-master/directory-structure.html): An

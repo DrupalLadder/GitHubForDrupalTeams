@@ -6,6 +6,7 @@ Project Maintainer
 ---
 
 This chapter walks through:
+  * [Setup](project-maintainer/setup.html): Set up module repo with push access.
   * [Git subtree pull](project-maintainer/git-subtree-pull.html): Pull changes
     from an individual project repo (module, theme, etc.) into a site repo.
   * [Git subtree push](project-maintainer/git-subtree-push.html): Push changes
