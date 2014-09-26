@@ -15,15 +15,22 @@ Overview of toplevel directories:
       rebuild.sh               # Rebuilds docroot
       reinstall.sh             # Reinstalls site via Drush
 
-
-Projects (modules, themes, etc.) and assets maintained by members of our site developer team are added to docroot as symlinks:
+Internals:
 
     RhymesSite/docroot/
-      profiles/rhymesdistro                -> ../../projects/rhymesdistro
-      sites/default                        -> ../../assets/sites/default
-      sites/all/modules/rhymesdisto        -> ../../../../projects/rhymesdistro 
-      sites/all/modules/rhymesdisto/rhymes -> ../../../../projects/rhymes
+      profiles/rhymesdisto            # Install profile
+      sites/all/modules/rhymesdisto/  # Modules included by rhymesdistro
+      sites/all/modules/custom/       # Custom, site-specific modules for www.rhymessite.com
+      sites/all/modules/contrib/      # Site-specific contrib modules (see build.make)
 
+Projects (modules, themes, etc.) and assets maintained by members of our site
+developer team are included in docroot as symlinks:
+
+    RhymesSite/docroot/
+      sites/default                               -> ../../assets/sites/default
+      profiles/rhymesdisto                        -> ../../projects/rhymesdistro 
+      sites/all/modules/rhymesdisto/rhymes        -> ../../../../projects/rhymes
+      sites/all/modules/custom/com_rhymessite_www -> ../../../../projects/com_rhymessite_www
 
 Files with site-specific customizations that are NOT part of a separate project go in the assets directory. Directory structure here mirrors docroot:
 
