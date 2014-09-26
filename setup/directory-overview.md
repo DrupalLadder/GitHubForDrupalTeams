@@ -1,45 +1,41 @@
 Setup: Directory structure
 --------------------------
 
-Here's a quick overview of the _rhymessite directory structure. It's organized
-this way to minimize friction for local development and future maintenance.
-For more details on this approach, see [Release Master: Directory structure](../release-master/directory-structure.html).
+RhymesSite directories are organized this way to minimize friction across diverse
+project types, workflows, and developer stories. This is all you need to know to work inside a single site
+repo. (More details about fancy stuff [here](../release-master/directory-structure.html).)
 
+Overview of toplevel directories:
 
-Overview of from the toplevel of the _rhymessite repo:
-
-    _rhymessite/
+    RhymesSite/
       assets/                  # Site-specific config files
       docroot/                 # Drupal code base
       projects/                # Custom and contrib projects we maintain
-      build.make               # Site's build file
-      buildmanager.config.yml  # Build Manager config
+      build.make               # Site build file
+      rebuild.sh               # Rebuilds docroot
+      reinstall.sh             # Reinstalls site via Drush
 
-Here's a closer look at subdirectories...
 
-Assets mirrors the directory structure of a Drupal code base. Any individual
-files with site-specific customizations that are NOT part of a separate project
-go here. This includes things like: settings.php, .htaccess, robots.txt, etc.
+Projects (modules, themes, etc.) and assets maintained by members of our site developer team are added to docroot as symlinks:
 
-    _rhymessite/
-      assets/                       
+    RhymesSite/docroot/
+      profiles/rhymesdistro                -> ../../projects/rhymesdistro
+      sites/default                        -> ../../assets/sites/default
+      sites/all/modules/rhymesdisto        -> ../../../../projects/rhymesdistro 
+      sites/all/modules/rhymesdisto/rhymes -> ../../../../projects/rhymes
+
+
+Files with site-specific customizations that are NOT part of a separate project go in the assets directory. Directory structure here mirrors docroot:
+
+    RhymesSite/assets/                       
         sites/
           default/
             default.settings.php
             example.settings.local.php
             settings.php
 
-Projects we maintain and site-specific assets are included in the code base as symlinks.
+Projects we maintain--custom modules and contrib modules--live in the projects directory:
 
-    docroot/
-      profiles/rhymesdistro                -> ../../projects/rhymesdistro
-      sites/default                        -> ../../assets/sites/default
-      sites/all/modules/rhymesdisto        -> ../../../../projects/rhymesdistro 
-      sites/all/modules/rhymesdisto/rhymes -> ../../../../projects/rhymes
-
-Projects we maintain--custom modules and contrib modules--live in the projects
-directory.
-
-    projects/
+    RhymesSite/projects/
       rhymes/
       rhymesdistro/

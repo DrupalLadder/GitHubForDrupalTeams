@@ -1,8 +1,7 @@
 # Summary
 
-* [Local env setup](setup/README.md)
-    * [Basic](setup/basic.md)
-    * [Advanced](setup/advanced.md)
+* [Getting started](setup/README.md)
+    * [Setup](setup/setup.md)
     * [Directory overview](setup/directory-overview.md)
 * [Site Developer](site-developer/README.md)
     * [Site Setup](site-developer/site-setup.md)
