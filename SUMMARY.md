@@ -1,6 +1,6 @@
 # Summary
 
-* [Getting started](setup/README.md)
+* [Setup](setup/README.md)
     * [Download](setup/download.md)
     * [Directory overview](setup/directory-overview.md)
     * [Site Setup](setup/site-setup.md)
