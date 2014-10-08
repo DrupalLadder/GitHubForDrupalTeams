@@ -9,4 +9,4 @@ Create a personal "fork" of the site repo on GitHub.
 
 1. Create your own copy of the RhymesSite site repo by clicking "Fork". Now you
    should see your own copy/fork of RhymesSite hosted here:
-   https://github.com/<username>/RhymesSite
+   https://github.com/username/RhymesSite

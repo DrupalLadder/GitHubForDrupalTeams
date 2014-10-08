@@ -12,9 +12,9 @@ times. Do this here too.
    authoritative upstream drupalladder/master branch. We will do local
    development in "topic branches". Create a new branch for your development.
 
-      # Branch off the tip of drupalladder/master.
-      git checkout master
-      git checkout -b add-new-rhyme
+        # Branch off the tip of drupalladder/master.
+        git checkout master
+        git checkout -b add-new-rhyme
 
 1. Add your own new rhyme to the rhymes module. (Find one or make one up. You
    decide.)

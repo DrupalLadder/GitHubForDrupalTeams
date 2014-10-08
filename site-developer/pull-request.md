@@ -4,7 +4,7 @@ Site Developer: Pull request
 Submit your work for peer review as a "pull request".
 
 Your changes currently live here:
-https://github.com/<username>/RhymesSite
+https://github.com/username/RhymesSite
 
 You want to submit your work for peer review, to be merged into the Drupal
 Ladder's master branch here:
@@ -21,7 +21,8 @@ another user's branch is called a "pull request".
     Tip: When you submit your pull request, be sure to submit your pull request
     from and to here:
 
-    FROM: <username>/my-new-rhyme
+    FROM: username/my-new-rhyme
+
     TO: drupalladder/master
 
 1. Peer review.

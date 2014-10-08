@@ -11,7 +11,7 @@ repo.
 1. If you are not up to date with the latest development on rhymes, pull.
 
         cd path/to/RhymesSite
-        git subtree pull --squash --prefix=projects/rhymes https://github.com/<username>/rhymes master
+        git subtree pull --squash --prefix=projects/rhymes https://github.com/username/rhymes master
 
 1. Add a new rhyme.
 
@@ -29,6 +29,6 @@ repo.
 
        # Git subtree commands must be executed from the top level of your repo.
        cd ../../..
-       git subtree push --prefix=projects/rhymes https://github.com/<username>/rhymes master
+       git subtree push --prefix=projects/rhymes https://github.com/username/rhymes master
 
 

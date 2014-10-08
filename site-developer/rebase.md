@@ -45,40 +45,40 @@ Here's how you do it!...
 
 1. Make sure your master branch is up to date with the main project.
 
-      # Check out the master branch locally.
-      git checkout master
+        # Check out the master branch locally.
+        git checkout master
 
-      # Update it. First, pull in external changes.
-      git fetch drupalladder
+        # Update it. First, pull in external changes.
+        git fetch drupalladder
 
-      # Merge in any updates.
-      git merge drupalladder/master
+        # Merge in any updates.
+        git merge drupalladder/master
 
-      # Confirm your local version of master is in sync (has no differences)
-      # with drupalladder/master. If this is the case, you will see NO
-      # differences here.
-      git diff drupalladder/master
+        # Confirm your local version of master is in sync (has no differences)
+        # with drupalladder/master. If this is the case, you will see NO
+        # differences here.
+        git diff drupalladder/master
 
 1. Now rebase your development branch to the tip of drupalladder/master.
 
-      git checkout my-new-rhyme
+        git checkout my-new-rhyme
 
-      # We're about to rewrite history. It's bad manors on GitHub to rewrite
-      # history for published work. The safest way to do this is to create a new
-      # branch.
-      git checkout my-new-rhyme-rebase1
+        # We're about to rewrite history. It's bad manors on GitHub to rewrite
+        # history for published work. The safest way to do this is to create a new
+        # branch.
+        git checkout my-new-rhyme-rebase1
 
-      # Now rebase your work (my-new-rhyme-rebase1) to the tip of master.
-      git rebase master
+        # Now rebase your work (my-new-rhyme-rebase1) to the tip of master.
+        git rebase master
 
-      # Push your work up to github.
-      git push myremote
+        # Push your work up to github.
+        git push myremote
 
 1. If you have not already, go take a look at GitHub's network graph to get a
    clearer sense of what's going on with your commit history.
 
    Go here:
-   https://github.com/<username>/RhymesSite/network.
+   https://github.com/username/RhymesSite/network.
 
    Read the network graph like this:
 
@@ -105,10 +105,10 @@ Here's how you do it!...
                                             rewrite history as
                                             if this work had been
                                             done here
-                                                  *--*---*--*--> my-new-rhyme-rebase1
-                                                 /
-                *--*---*--*--> my-new-rhyme     /
-               /                               /
-        ---*--*---*--*--*--*-----*-----*--*---*----> drupalladder/master
+                                             *--*---*--*--> my-new-rhyme-rebase1
+                                            /
+                *--*--*--> my-new-rhyme    /
+               /                          /
+        ---*--*----*--*-----*-----*--*---*----> drupalladder/master
               |                  |      
               7.x-1.0-beta2   7.x-1.0-beta3   ...7.x-1.N
