@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Project maintainer | GitHub workflows for Drupal site development</title>
+        <title>Reset | GitHub workflows for Drupal site development</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../project-maintainer/git-subtree-push.html" />
+        <link rel="next" href="../site-developer/development.html" />
         
         
-        <link rel="prev" href="../site-developer/useful-commands.html" />
+        <link rel="prev" href="../site-developer/remotes.html" />
         
 
-        <meta property="og:title" content="Project maintainer | GitHub workflows for Drupal site development">
+        <meta property="og:title" content="Reset | GitHub workflows for Drupal site development">
         <meta property="og:site_name" content="GitHub workflows for Drupal site development">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -36,7 +36,7 @@
     </head>
     <body>
         
-    <div class="book"  data-level="3" data-basepath=".." data-revision="1412812389908">
+    <div class="book"  data-level="2.3" data-basepath=".." data-revision="1412812389908">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -308,7 +308,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 55.55555555555556%;min-width: 51.851851851851855%;"></div>
+        <div class="inner" style="width: 29.62962962962963%;min-width: 25.925925925925927%;"></div>
     </div>
     <div class="chapters">
     
@@ -330,19 +330,19 @@
     
         <a href="../site-developer/reset.html" title="Reset" class="chapter done " data-progress="2.3" style="left: 29.62962962962963%;"></a>
     
-        <a href="../site-developer/development.html" title="Development" class="chapter done " data-progress="2.4" style="left: 33.333333333333336%;"></a>
+        <a href="../site-developer/development.html" title="Development" class="chapter  " data-progress="2.4" style="left: 33.333333333333336%;"></a>
     
-        <a href="../site-developer/pull-request.html" title="Pull request" class="chapter done " data-progress="2.5" style="left: 37.03703703703704%;"></a>
+        <a href="../site-developer/pull-request.html" title="Pull request" class="chapter  " data-progress="2.5" style="left: 37.03703703703704%;"></a>
     
-        <a href="../site-developer/rebase.html" title="Rebase" class="chapter done " data-progress="2.6" style="left: 40.74074074074074%;"></a>
+        <a href="../site-developer/rebase.html" title="Rebase" class="chapter  " data-progress="2.6" style="left: 40.74074074074074%;"></a>
     
-        <a href="../site-developer/rebase-interactive.html" title="Interactive Rebase" class="chapter done " data-progress="2.7" style="left: 44.44444444444444%;"></a>
+        <a href="../site-developer/rebase-interactive.html" title="Interactive Rebase" class="chapter  " data-progress="2.7" style="left: 44.44444444444444%;"></a>
     
-        <a href="../site-developer/merge-conflicts.html" title="Resolve merge conflicts" class="chapter done " data-progress="2.8" style="left: 48.148148148148145%;"></a>
+        <a href="../site-developer/merge-conflicts.html" title="Resolve merge conflicts" class="chapter  " data-progress="2.8" style="left: 48.148148148148145%;"></a>
     
-        <a href="../site-developer/useful-commands.html" title="Useful commands" class="chapter done " data-progress="2.9" style="left: 51.851851851851855%;"></a>
+        <a href="../site-developer/useful-commands.html" title="Useful commands" class="chapter  " data-progress="2.9" style="left: 51.851851851851855%;"></a>
     
-        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter done new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
+        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter  new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
     
         <a href="../project-maintainer/git-subtree-push.html" title="Git subtree push" class="chapter  " data-progress="3.1" style="left: 59.25925925925926%;"></a>
     
@@ -373,10 +373,38 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_3">
+                    <section class="normal" id="section-gitbook_20">
                     
-                        <h1 id="project-maintainer">Project Maintainer</h1>
-<h3 id="_user-story_-as-a-project-maintainer-i-want-to-work-on-my-projects-inside-site-repositories-then-push-changes-out-of-my-site-repo-up-to-drupal-org-or-github-or-wherever-and-to-pull-work-from-drupal-org-or-github-or-wherever-into-my-site-repo-"><em>User story</em>: As a project maintainer I want to work on my projects inside site repositories, then push changes out of my site repo up to drupal.org (or GitHub, or wherever), and to pull work from drupal.org (or GitHub or wherever) into my site repo.</h3>
+                        <h2 id="site-developer-reset">Site Developer: Reset</h2>
+<p>For the sake of providing a consistent stable example exercise, we will pretend
+the most up-to-date release of RhymesSite is version 7.x-1.0-beta2. Git makes it
+easy to go back in time, rewinding your project&#39;s history as if anything later
+than 7.x-1.0-beta2 hasn&#39;t happened yet. GitHub let&#39;s you do this in your hosted
+fork of the RhymesSite project too.</p>
+<ol>
+<li><p>To see where we&#39;re starting, check what version we&#39;re on or near right now.</p>
+<pre><code> # This indicates the tagged release you&#39;re on or near.
+ git describe --tag
+</code></pre></li>
+<li><p>Rewind your project history to version 7.x-1.0-beta2. (This is like undoing
+everything all the way back to 7.x-1.0-beta2.)</p>
+<pre><code> # Confirm you&#39;re on the master branch. If you&#39;re not, check it out.
+ git branch
+ git checkout master
+
+ # Undo git history in our local copy back to version 1.0-beta2.
+ git reset --hard 7.x-1.0-beta2
+
+ # Force push to your fork to rewind history just like you did locally.
+ # Note: It&#39;s bad manors to rewrite published history. If
+ # somebody else is following your work on GitHub and you change things
+ # they already pulled in, this is likely to create merge conflict
+ # headaches for people working with your project. Don&#39;t do this willy
+ # nilly. Only force push if you are certain (like you are now) you&#39;re not
+ # going to trip anyone up.
+ git push -f myremote
+</code></pre></li>
+</ol>
 
                     
                     </section>
@@ -386,10 +414,10 @@
         </div>
 
         
-        <a href="../site-developer/useful-commands.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../site-developer/remotes.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../project-maintainer/git-subtree-push.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../site-developer/development.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

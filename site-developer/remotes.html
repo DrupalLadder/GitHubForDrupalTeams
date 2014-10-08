@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Project maintainer | GitHub workflows for Drupal site development</title>
+        <title>Remotes | GitHub workflows for Drupal site development</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../project-maintainer/git-subtree-push.html" />
+        <link rel="next" href="../site-developer/reset.html" />
         
         
-        <link rel="prev" href="../site-developer/useful-commands.html" />
+        <link rel="prev" href="../site-developer/fork.html" />
         
 
-        <meta property="og:title" content="Project maintainer | GitHub workflows for Drupal site development">
+        <meta property="og:title" content="Remotes | GitHub workflows for Drupal site development">
         <meta property="og:site_name" content="GitHub workflows for Drupal site development">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -36,7 +36,7 @@
     </head>
     <body>
         
-    <div class="book"  data-level="3" data-basepath=".." data-revision="1412812389908">
+    <div class="book"  data-level="2.2" data-basepath=".." data-revision="1412812389908">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -308,7 +308,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 55.55555555555556%;min-width: 51.851851851851855%;"></div>
+        <div class="inner" style="width: 25.925925925925927%;min-width: 22.22222222222222%;"></div>
     </div>
     <div class="chapters">
     
@@ -328,21 +328,21 @@
     
         <a href="../site-developer/remotes.html" title="Remotes" class="chapter done " data-progress="2.2" style="left: 25.925925925925927%;"></a>
     
-        <a href="../site-developer/reset.html" title="Reset" class="chapter done " data-progress="2.3" style="left: 29.62962962962963%;"></a>
+        <a href="../site-developer/reset.html" title="Reset" class="chapter  " data-progress="2.3" style="left: 29.62962962962963%;"></a>
     
-        <a href="../site-developer/development.html" title="Development" class="chapter done " data-progress="2.4" style="left: 33.333333333333336%;"></a>
+        <a href="../site-developer/development.html" title="Development" class="chapter  " data-progress="2.4" style="left: 33.333333333333336%;"></a>
     
-        <a href="../site-developer/pull-request.html" title="Pull request" class="chapter done " data-progress="2.5" style="left: 37.03703703703704%;"></a>
+        <a href="../site-developer/pull-request.html" title="Pull request" class="chapter  " data-progress="2.5" style="left: 37.03703703703704%;"></a>
     
-        <a href="../site-developer/rebase.html" title="Rebase" class="chapter done " data-progress="2.6" style="left: 40.74074074074074%;"></a>
+        <a href="../site-developer/rebase.html" title="Rebase" class="chapter  " data-progress="2.6" style="left: 40.74074074074074%;"></a>
     
-        <a href="../site-developer/rebase-interactive.html" title="Interactive Rebase" class="chapter done " data-progress="2.7" style="left: 44.44444444444444%;"></a>
+        <a href="../site-developer/rebase-interactive.html" title="Interactive Rebase" class="chapter  " data-progress="2.7" style="left: 44.44444444444444%;"></a>
     
-        <a href="../site-developer/merge-conflicts.html" title="Resolve merge conflicts" class="chapter done " data-progress="2.8" style="left: 48.148148148148145%;"></a>
+        <a href="../site-developer/merge-conflicts.html" title="Resolve merge conflicts" class="chapter  " data-progress="2.8" style="left: 48.148148148148145%;"></a>
     
-        <a href="../site-developer/useful-commands.html" title="Useful commands" class="chapter done " data-progress="2.9" style="left: 51.851851851851855%;"></a>
+        <a href="../site-developer/useful-commands.html" title="Useful commands" class="chapter  " data-progress="2.9" style="left: 51.851851851851855%;"></a>
     
-        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter done new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
+        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter  new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
     
         <a href="../project-maintainer/git-subtree-push.html" title="Git subtree push" class="chapter  " data-progress="3.1" style="left: 59.25925925925926%;"></a>
     
@@ -373,10 +373,56 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_3">
+                    <section class="normal" id="section-gitbook_19">
                     
-                        <h1 id="project-maintainer">Project Maintainer</h1>
-<h3 id="_user-story_-as-a-project-maintainer-i-want-to-work-on-my-projects-inside-site-repositories-then-push-changes-out-of-my-site-repo-up-to-drupal-org-or-github-or-wherever-and-to-pull-work-from-drupal-org-or-github-or-wherever-into-my-site-repo-"><em>User story</em>: As a project maintainer I want to work on my projects inside site repositories, then push changes out of my site repo up to drupal.org (or GitHub, or wherever), and to pull work from drupal.org (or GitHub or wherever) into my site repo.</h3>
+                        <h2 id="site-developer-remotes">Site Developer: Remotes</h2>
+<p>You cloned RhymesSite from the authoritative DrupalLadder repository. But you
+do not have access to save your changes (push and pull) directly there. (And if
+you do have access you still won&#39;t push changes directly to this repo because we
+want all work peer reviewed before committing to the main project.) You want to
+save your development work in your copy, or &quot;fork&quot;, of the main project.</p>
+<p>Saving changes to your own fork while following, or &quot;tracking&quot;, changes in the
+upstream DrupalLadder repo means working with multiple remotes. Set up your
+remotes following the instructions below.</p>
+<p>To avoid confusion, it&#39;s best to follow some consistent convention for naming
+your remotes. The convention we follow below is to name remotes after their
+corresponding github user name. For example:</p>
+<ul>
+<li>github.com/drupalladder/RhymesSite is named drupalladder</li>
+<li>github.com/bryanhirsch/RhymesSite would be named bryanhirsch</li>
+<li><p>github.com/myusername/RhymesSite would be named myusername</p>
+</li>
+<li><p>Review your remotes.</p>
+<pre><code> cd path/to/RhymesSite
+
+ # See a list of remotes.
+ git remote
+
+ # See where your remotes point (to push and pull to and from).
+ git remote -v
+</code></pre></li>
+<li><p>Add a new remote pointing to your own fork of the RhymesSite site repository.</p>
+<pre><code> # Add a new remote. Replace &quot;myusername&quot; with your own GitHub user name.
+ git remote add myusername https://github.com/myusername/RhymesSite.git
+
+ # Update your local repo with a copy of your new remote&#39;s git history.
+ git fetch myusername
+
+ # See what you just did.
+ git remote -v
+</code></pre></li>
+<li><p>Rename origin to follow our naming convention.</p>
+<pre><code> # Rename origin.
+ git remote rename origin drupalladder
+
+ # If you&#39;re following along with your own developer site on Acquia
+ # Cloud, add a remote for that repo too.
+ git remote add acquia &lt;subscription-name&gt;@&lt;something&gt;.git
+
+ # Admire your work one more time.
+ git remote -v
+</code></pre></li>
+</ul>
 
                     
                     </section>
@@ -386,10 +432,10 @@
         </div>
 
         
-        <a href="../site-developer/useful-commands.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../site-developer/fork.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../project-maintainer/git-subtree-push.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../site-developer/reset.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

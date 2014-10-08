@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Project maintainer | GitHub workflows for Drupal site development</title>
+        <title>Useful commands | GitHub workflows for Drupal site development</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../project-maintainer/git-subtree-push.html" />
+        <link rel="next" href="../project-maintainer/README.html" />
         
         
-        <link rel="prev" href="../site-developer/useful-commands.html" />
+        <link rel="prev" href="../site-developer/merge-conflicts.html" />
         
 
-        <meta property="og:title" content="Project maintainer | GitHub workflows for Drupal site development">
+        <meta property="og:title" content="Useful commands | GitHub workflows for Drupal site development">
         <meta property="og:site_name" content="GitHub workflows for Drupal site development">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -36,7 +36,7 @@
     </head>
     <body>
         
-    <div class="book"  data-level="3" data-basepath=".." data-revision="1412812389908">
+    <div class="book"  data-level="2.9" data-basepath=".." data-revision="1412812389908">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -308,7 +308,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 55.55555555555556%;min-width: 51.851851851851855%;"></div>
+        <div class="inner" style="width: 51.851851851851855%;min-width: 48.148148148148145%;"></div>
     </div>
     <div class="chapters">
     
@@ -342,7 +342,7 @@
     
         <a href="../site-developer/useful-commands.html" title="Useful commands" class="chapter done " data-progress="2.9" style="left: 51.851851851851855%;"></a>
     
-        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter done new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
+        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter  new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
     
         <a href="../project-maintainer/git-subtree-push.html" title="Git subtree push" class="chapter  " data-progress="3.1" style="left: 59.25925925925926%;"></a>
     
@@ -373,10 +373,40 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_3">
+                    <section class="normal" id="section-gitbook_21">
                     
-                        <h1 id="project-maintainer">Project Maintainer</h1>
-<h3 id="_user-story_-as-a-project-maintainer-i-want-to-work-on-my-projects-inside-site-repositories-then-push-changes-out-of-my-site-repo-up-to-drupal-org-or-github-or-wherever-and-to-pull-work-from-drupal-org-or-github-or-wherever-into-my-site-repo-"><em>User story</em>: As a project maintainer I want to work on my projects inside site repositories, then push changes out of my site repo up to drupal.org (or GitHub, or wherever), and to pull work from drupal.org (or GitHub or wherever) into my site repo.</h3>
+                        <h2 id="site-developer-useful-commands">Site Developer: Useful commands</h2>
+<p>Here are some useful git commands to help compose commits worth reading:</p>
+<ul>
+<li>Composing commits:<ul>
+<li><code>git add --patch</code></li>
+<li><code>git add path/to/directory</code></li>
+<li><code>git add path/to/file</code></li>
+</ul>
+</li>
+<li>Revising commit history:<ul>
+<li><code>git commit --amend</code></li>
+<li><code>git reset --hard</code></li>
+<li><code>git reset --mixed</code></li>
+<li><code>git reset --soft</code></li>
+<li><code>git cherry-pick [commit-id]</code></li>
+<li><code>git revert [commit-id]</code></li>
+<li><code>git checkout -- path/to/file</code></li>
+<li><code>git checkout -- path/to/directory</code></li>
+</ul>
+</li>
+<li>Reviewing commit history:<ul>
+<li><code>git show [commit-id]</code></li>
+<li><code>git show [commit-id] --stat</code></li>
+<li><code>git log -p</code></li>
+<li><code>git log --stat</code></li>
+<li><code>git log --oneline</code></li>
+<li><code>git log -3</code></li>
+<li><code>git log -- path/to/directory</code></li>
+<li><code>git log -- path/to/file</code></li>
+</ul>
+</li>
+</ul>
 
                     
                     </section>
@@ -386,10 +416,10 @@
         </div>
 
         
-        <a href="../site-developer/useful-commands.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../site-developer/merge-conflicts.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../project-maintainer/git-subtree-push.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../project-maintainer/README.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
