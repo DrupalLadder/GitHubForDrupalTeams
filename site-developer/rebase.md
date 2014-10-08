@@ -1,98 +1,114 @@
 Site Developer: Rebase
 ----------------------
 
-A new version of _rhymesite has been tagged and released including a bunch of
-new work that was not in the code base when you created your branch. It's your
-responsibility to bring your work up to date and resolve any merge confilcts
-before your pull request gets merged.
+When we started these exercises, we pretended to start at an earlier point in
+time when 7.x-1.0-beta2 was the most recent release available for RhymesSite.
+Now let's fast forward in time to the present day. We've been hard at work on
+our development branch, refactoring and perfecting a new rhyme to add to the
+code base. Now you want to get your dev branch up to date with the latest work
+committed to the main project's master branch. You will do this by "rebasing". 
 
-1. Before you make any changes, look at GitHub's network graph. Identify your
-   branch on the graph, and see what it looks like in relation to Drupal Ladder's
-   master branch. See: https://github.com/<username>/RhymesSite/network.
+Before we dive into the steps, here's a quick explaination of what rebasing is
+and how we're going to use git's `rebase` command here:
 
-   Leave this open in a tab for reference at the end of this exercise.
+`git rebase` enables you to rewrite your commit history. The most
+common uses for this are:
 
-1. Update master branch.
+- To get a development branch up to date with the main project's latest changes.
+- To tidy up a confusing git log would otherwise be difficult for other
+  developers to understand, peer review, or debug.
 
-        # Your copy of master should still be pointed at 7.x-1.0.
-        git checkout master
-        git describe --tag
+The example below demostrates the first use case above: Getting a development
+branch up to date with the main project's latest changes.
 
-        # Update master to be in sync with the latest work.
-        git fetch drupalladder
-        git merge drupalladder/master
+If you want your work to actually get merged into the main project, you should
+rebase your development branch to the tip of main project's master branch before
+submitting your pull request. This is helpful for a few reasons:
 
-        # Now there should be no difference between the local master branch and
-        # Drupal Ladder's master branch
-        git diff drupalladder/master
+- You are responsible for staying current with the main project. If there are
+  merge conflicts or bugs because your branch has gotten out of date, it's your
+  responsibility (not the code reviewer's or project maintainer's) to get your
+  work up to date. Rebasing replays your work commit-by-commit onto the tip of
+  the branch you are rebasing "onto". If there are merge conflicts, git will
+  stop, prompt you to resolve them, then continue after the conflict is
+  resolved.
+- Pull request that are out of date with the branch they're submitted to can be
+  deceptively complex and confusing to review and test.
+- Some people are used to updating their dev branch by merging in work committed to
+  the upstream master branch. The end result may appear the same. But this can
+  create big headaches if development goes on for a while, includes many merges,
+  or large merges. It can also make debugging and refactoring a lot more
+  complicated (e.g. using git bisect) because of the way this organizes the commit
+  history.
 
-1. Rebase your work to the tip of the master branch.
-        
-        git checkout my-new-rhyme
-        git rebase master
+Here's how you do it!...
 
-        # If there are merge conflicts, resolve them and commit here.
+1. Make sure your master branch is up to date with the main project.
 
-1. Resubmit your pull request. Note: In the previous step you rewrote your
-   branch's commit history, as if your work had been added to the tip of the
-   current master branch. If you try to push to your fork, your push will be
-   rejected because it's commit history doesn't match your local history
-   anymore. You have two options now. (A) Cautious and careful: Rename your
-   branch, push it up to GitHub as a new branch, create a brand new pull
-   request. (B) Fast and sometimes handy: Force push to existing branch, rewrite
-   history in the pull request you already created.
+      # Check out the master branch locally.
+      git checkout master
 
-        # Try to push, it will fail becasue your history is out of sync now.
-        git push <my-user-name> my-new-rhyme
+      # Update it. First, pull in external changes.
+      git fetch drupalladder
 
-        # Cautious: Rename the branch.
-        git branch -m my-new-rhyme-rebased
-        git push <my-user-name> my-new-rhyme-rebased
+      # Merge in any updates.
+      git merge drupalladder/master
 
-        # Now create a new pull request from <my-user-name/my-new-rhyme-rebased
-        # to drupalladder/master.
+      # Confirm your local version of master is in sync (has no differences)
+      # with drupalladder/master. If this is the case, you will see NO
+      # differences here.
+      git diff drupalladder/master
 
-        # Try the fast and loose approach too. First re-create your rebased
-        # branch with the original branch name.
-        git checkout -b my-new-rhyme
+1. Now rebase your development branch to the tip of drupalladder/master.
 
-        # Now force push. This will update your original pull request.
-        git push -f <my-user-name> my-new-rhyme
+      git checkout my-new-rhyme
 
-1. If you have not already, go take a look at your pull requests. Then, in a new
-   tab, revisit your network graph and compare it to the network graph you
-   loaded at the beginning of the exercise.
+      # We're about to rewrite history. It's bad manors on GitHub to rewrite
+      # history for published work. The safest way to do this is to create a new
+      # branch.
+      git checkout my-new-rhyme-rebase1
+
+      # Now rebase your work (my-new-rhyme-rebase1) to the tip of master.
+      git rebase master
+
+      # Push your work up to github.
+      git push myremote
+
+1. If you have not already, go take a look at GitHub's network graph to get a
+   clearer sense of what's going on with your commit history.
+
+   Go here:
    https://github.com/<username>/RhymesSite/network.
 
    Read the network graph like this:
 
-   Branch off 7.x-1.0 at some point earlier in the project's history:
+   Branch off master at some point earlier in the project's history:
 
                 *--*---*--*--> my-new-rhyme
                /
         ---*--*--------------> drupalladder/master
               |
-              7.x-1.0
+              7.x-1.0-beta2
 
    
    Other stuff gets merged before my-new-rhyme:
 
                 *--*---*--*--> my-new-rhyme
                /
-        ---*--*---*--*--*--*-----*-----*--*---*-*--> drupalladder/master
-              |         |              |
-              7.x-1.0   7.x-1.1        7.x-1.N
+        ---*--*------*-----*-----*-----*--*---*-*--> drupalladder/master
+              |                  |      
+              7.x-1.0-beta2   7.x-1.0-beta3   
 
 
    Rebase my-new-rhyme to the tip of drupalladder/master:
 
-                *--*---*--*--> my-new-rhyme
-               /                               
-            detach                          rewrite history as
-            this                            if this work had been
-            from 7.x-1.0                    done here
-                                                  *--*---*--*--> my-new-rhyme
+                                            rewrite history as
+                                            if this work had been
+                                            done here
+                                                  *--*---*--*--> my-new-rhyme-rebase1
                                                  /
-        ---*--*---*--*--*--*-----*-----*--*---*-*--> drupalladder/master
-              |         |              |
-              7.x-1.0   7.x-1.1        7.x-1.N
+                *--*---*--*--> my-new-rhyme     /
+               /                               /
+        ---*--*---*--*--*--*-----*-----*--*---*----> drupalladder/master
+              |                  |      
+              7.x-1.0-beta2   7.x-1.0-beta3   ...7.x-1.N
