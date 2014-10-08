@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Git subtree pull | GitHub workflows for Drupal site development</title>
+        <title>Resolve merge conflicts | GitHub workflows for Drupal site development</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../project-maintainer/drushsubtree.html" />
+        <link rel="next" href="../site-developer/useful-commands.html" />
         
         
-        <link rel="prev" href="../project-maintainer/git-subtree-push.html" />
+        <link rel="prev" href="../site-developer/rebase-interactive.html" />
         
 
-        <meta property="og:title" content="Git subtree pull | GitHub workflows for Drupal site development">
+        <meta property="og:title" content="Resolve merge conflicts | GitHub workflows for Drupal site development">
         <meta property="og:site_name" content="GitHub workflows for Drupal site development">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -36,7 +36,7 @@
     </head>
     <body>
         
-    <div class="book"  data-level="3.2" data-basepath=".." data-revision="1412811996588">
+    <div class="book"  data-level="2.8" data-basepath=".." data-revision="1412811996588">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -308,7 +308,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 62.96296296296296%;min-width: 59.25925925925926%;"></div>
+        <div class="inner" style="width: 48.148148148148145%;min-width: 44.44444444444444%;"></div>
     </div>
     <div class="chapters">
     
@@ -340,13 +340,13 @@
     
         <a href="../site-developer/merge-conflicts.html" title="Resolve merge conflicts" class="chapter done " data-progress="2.8" style="left: 48.148148148148145%;"></a>
     
-        <a href="../site-developer/useful-commands.html" title="Useful commands" class="chapter done " data-progress="2.9" style="left: 51.851851851851855%;"></a>
+        <a href="../site-developer/useful-commands.html" title="Useful commands" class="chapter  " data-progress="2.9" style="left: 51.851851851851855%;"></a>
     
-        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter done new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
+        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter  new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
     
-        <a href="../project-maintainer/git-subtree-push.html" title="Git subtree push" class="chapter done " data-progress="3.1" style="left: 59.25925925925926%;"></a>
+        <a href="../project-maintainer/git-subtree-push.html" title="Git subtree push" class="chapter  " data-progress="3.1" style="left: 59.25925925925926%;"></a>
     
-        <a href="../project-maintainer/git-subtree-pull.html" title="Git subtree pull" class="chapter done " data-progress="3.2" style="left: 62.96296296296296%;"></a>
+        <a href="../project-maintainer/git-subtree-pull.html" title="Git subtree pull" class="chapter  " data-progress="3.2" style="left: 62.96296296296296%;"></a>
     
         <a href="../project-maintainer/drushsubtree.html" title="Drush Subtree" class="chapter  " data-progress="3.3" style="left: 66.66666666666667%;"></a>
     
@@ -373,17 +373,26 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4">
+                    <section class="normal" id="section-gitbook_15">
                     
-                        <h2 id="project-maintainer-git-subtree-pull">Project Maintainer: Git subtree pull</h2>
-<p>Scenario: You are the maintainer of the Rhymes module. You did some work on it
-for some other project and pushed those changes up to your repo on GitHub or
-drupal.org. Now you&#39;re doing devleopment on RhymesSite. You want to pull in the
-latest changes to Rhymes module. </p>
-<p>Try this: </p>
-<pre><code>    cd path/to/RhymesSite
-    git subtree pull --squash --prefix=project/rhymes https://github.com/drupalladder/rhymes master
-</code></pre>
+                        <h2 id="site-developer-resolve-merge-conflicts">Site Developer: Resolve merge conflicts</h2>
+<p>Being able to resolve merge conflicts is critical to being able to collaborate
+effectively with other developers. There&#39;s nothing about this workflow that&#39;s
+different for a collaborative workflow versus an individual person working in a
+single repo, so it&#39;s beyond the scope of the examples included here. If you&#39;ve
+gotten by using Git without mastering conflict resolution, now is the time to
+figure it out. Git&#39;s documentation is a great place to start:</p>
+<p>Open up the documentation:</p>
+<pre><code>  git merge --help
+</code></pre><p>Then take a look at these sections of merge documentation:</p>
+<ul>
+<li>HOW CONFLICTS ARE PRESENTED</li>
+<li>HOW TO RESOLVE CONFLICTS</li>
+<li>EXAMPLES</li>
+</ul>
+<p>There are a number of different tools (command line and GUI) for visualizing and
+resolving merge conflicts. Google around. Find a tool you like.</p>
+
                     
                     </section>
                 
@@ -392,10 +401,10 @@ latest changes to Rhymes module. </p>
         </div>
 
         
-        <a href="../project-maintainer/git-subtree-push.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../site-developer/rebase-interactive.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../project-maintainer/drushsubtree.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../site-developer/useful-commands.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

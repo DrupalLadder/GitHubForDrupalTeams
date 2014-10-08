@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Git subtree pull | GitHub workflows for Drupal site development</title>
+        <title>Development | GitHub workflows for Drupal site development</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../project-maintainer/drushsubtree.html" />
+        <link rel="next" href="../site-developer/pull-request.html" />
         
         
-        <link rel="prev" href="../project-maintainer/git-subtree-push.html" />
+        <link rel="prev" href="../site-developer/reset.html" />
         
 
-        <meta property="og:title" content="Git subtree pull | GitHub workflows for Drupal site development">
+        <meta property="og:title" content="Development | GitHub workflows for Drupal site development">
         <meta property="og:site_name" content="GitHub workflows for Drupal site development">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -36,7 +36,7 @@
     </head>
     <body>
         
-    <div class="book"  data-level="3.2" data-basepath=".." data-revision="1412811996588">
+    <div class="book"  data-level="2.4" data-basepath=".." data-revision="1412811996588">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -308,7 +308,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 62.96296296296296%;min-width: 59.25925925925926%;"></div>
+        <div class="inner" style="width: 33.333333333333336%;min-width: 29.62962962962963%;"></div>
     </div>
     <div class="chapters">
     
@@ -332,21 +332,21 @@
     
         <a href="../site-developer/development.html" title="Development" class="chapter done " data-progress="2.4" style="left: 33.333333333333336%;"></a>
     
-        <a href="../site-developer/pull-request.html" title="Pull request" class="chapter done " data-progress="2.5" style="left: 37.03703703703704%;"></a>
+        <a href="../site-developer/pull-request.html" title="Pull request" class="chapter  " data-progress="2.5" style="left: 37.03703703703704%;"></a>
     
-        <a href="../site-developer/rebase.html" title="Rebase" class="chapter done " data-progress="2.6" style="left: 40.74074074074074%;"></a>
+        <a href="../site-developer/rebase.html" title="Rebase" class="chapter  " data-progress="2.6" style="left: 40.74074074074074%;"></a>
     
-        <a href="../site-developer/rebase-interactive.html" title="Interactive Rebase" class="chapter done " data-progress="2.7" style="left: 44.44444444444444%;"></a>
+        <a href="../site-developer/rebase-interactive.html" title="Interactive Rebase" class="chapter  " data-progress="2.7" style="left: 44.44444444444444%;"></a>
     
-        <a href="../site-developer/merge-conflicts.html" title="Resolve merge conflicts" class="chapter done " data-progress="2.8" style="left: 48.148148148148145%;"></a>
+        <a href="../site-developer/merge-conflicts.html" title="Resolve merge conflicts" class="chapter  " data-progress="2.8" style="left: 48.148148148148145%;"></a>
     
-        <a href="../site-developer/useful-commands.html" title="Useful commands" class="chapter done " data-progress="2.9" style="left: 51.851851851851855%;"></a>
+        <a href="../site-developer/useful-commands.html" title="Useful commands" class="chapter  " data-progress="2.9" style="left: 51.851851851851855%;"></a>
     
-        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter done new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
+        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter  new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
     
-        <a href="../project-maintainer/git-subtree-push.html" title="Git subtree push" class="chapter done " data-progress="3.1" style="left: 59.25925925925926%;"></a>
+        <a href="../project-maintainer/git-subtree-push.html" title="Git subtree push" class="chapter  " data-progress="3.1" style="left: 59.25925925925926%;"></a>
     
-        <a href="../project-maintainer/git-subtree-pull.html" title="Git subtree pull" class="chapter done " data-progress="3.2" style="left: 62.96296296296296%;"></a>
+        <a href="../project-maintainer/git-subtree-pull.html" title="Git subtree pull" class="chapter  " data-progress="3.2" style="left: 62.96296296296296%;"></a>
     
         <a href="../project-maintainer/drushsubtree.html" title="Drush Subtree" class="chapter  " data-progress="3.3" style="left: 66.66666666666667%;"></a>
     
@@ -373,17 +373,51 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4">
+                    <section class="normal" id="section-gitbook_13">
                     
-                        <h2 id="project-maintainer-git-subtree-pull">Project Maintainer: Git subtree pull</h2>
-<p>Scenario: You are the maintainer of the Rhymes module. You did some work on it
-for some other project and pushed those changes up to your repo on GitHub or
-drupal.org. Now you&#39;re doing devleopment on RhymesSite. You want to pull in the
-latest changes to Rhymes module. </p>
-<p>Try this: </p>
-<pre><code>    cd path/to/RhymesSite
-    git subtree pull --squash --prefix=project/rhymes https://github.com/drupalladder/rhymes master
-</code></pre>
+                        <h2 id="site-developer-development">Site Developer: Development</h2>
+<p>Now do some development work to be contributed to RhymesSite. Try adding a new
+rhyme to the rhymes module.</p>
+<p>Make this realistic. Nobody writes a perfect first draft the first time they
+make edits. All quality work is written, saved, reworked, and saved again many
+times. Do this here too.</p>
+<ol>
+<li><p>To keep things simple, our local master branch should always match the
+authoritative upstream drupalladder/master branch. We will do local
+development in &quot;topic branches&quot;. Create a new branch for your development.</p>
+<pre><code> # Branch off the tip of drupalladder/master.
+ git checkout master
+ git checkout -b add-new-rhyme
+</code></pre></li>
+<li><p>Add your own new rhyme to the rhymes module. (Find one or make one up. You
+decide.)</p>
+<pre><code> # Modules included in Rhymes Distro live here.
+ cd docroot/sites/all/modules/rhymesdistro/
+
+ # We&#39;re adding a new rhyme to the rhymes module. Read the README to get
+ # a quick overview of how this simple module works.
+ cd rhymes
+ vim README.md
+
+ # Add your new rhyme here.
+ cd rhymesfiles
+ # Use your favorite text editor to add a new rhyme to the collection.
+ vim my-rhyme.txt
+
+ # To make this a realistic example, make some edits. Commit. Edit.
+ # Commit again. Do this at least five times.
+</code></pre></li>
+<li><p>Push your changes to save your work on GitHub.</p>
+<pre><code> # If you forgot the names of your remotes or where they push to, review
+ # them like this.
+ git remote
+ git remote -v
+
+ # Push to your fork to backup your work.
+ git push myremote
+</code></pre></li>
+</ol>
+
                     
                     </section>
                 
@@ -392,10 +426,10 @@ latest changes to Rhymes module. </p>
         </div>
 
         
-        <a href="../project-maintainer/git-subtree-push.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../site-developer/reset.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../project-maintainer/drushsubtree.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../site-developer/pull-request.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
