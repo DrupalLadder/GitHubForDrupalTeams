@@ -1,7 +1,7 @@
 Project Maintainer: Git subtree push
 ------------------------------------
 
-Scenario: While doing devleopment on _rhymessite, you make updates to rhymes
+Scenario: While doing devleopment on RhymesSite, you make updates to rhymes
 module. Here you will push those changes out of your site repo into your module
 repo.
 
@@ -10,7 +10,7 @@ repo.
 
 1. If you are not up to date with the latest development on rhymes, pull.
 
-        cd path/to/_rhymessite
+        cd path/to/RhymesSite
         git subtree pull --squash --prefix=projects/rhymes https://github.com/<username>/rhymes master
 
 1. Add a new rhyme.

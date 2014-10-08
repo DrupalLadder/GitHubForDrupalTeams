@@ -1,7 +1,7 @@
 Project Maintainer: Setup
 ==================
 
-Pushing changes to the rhymes module from _rhymessite into an external rhymes
+Pushing changes to the rhymes module from RhymesSite into an external rhymes
 repo really only practical if you're a module maintainer or contributor working
 on rhymes module. If you do not have push access to
 github.com/drupalladder/rhymes.git, we need to do a little setup to simulate the

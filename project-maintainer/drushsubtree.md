@@ -10,8 +10,8 @@ projects in site repos.
 
 1. Drush Subtree uses a Build Manager config file to keep track of which
    subtree projects should be pushed and pulled from where.
-   [_rhymessite](https://github.com/DrupalLadder/_rhymessite) has a 
-   [buildmanager.config.yml](https://github.com/DrupalLadder/_rhymessite/blob/master/buildmanager.config.yml)
+   [RhymesSite](https://github.com/DrupalLadder/RhymesSite) has a
+   [buildmanager.config.yml](https://github.com/DrupalLadder/RhymesSite/blob/master/buildmanager.config.yml)
    file included in the toplevel of the repo. But since you don't actually have
    push access to the repos in that config file, go ahead and create another
    one.
@@ -37,7 +37,7 @@ projects in site repos.
             message: 'rhymes subtree from https://github.com/DrupalLadder/rhymes.git'
 
         # Add your config to .gitignore so you don't accidentally commit it and
-        # submit it to the _rhymessite project with a pull request.
+        # submit it to the RhymesSite project with a pull request.
         echo 'buildmanager.my-username.yml' >> .gitignore
 
 1. Now you're ready to test drive Drush Subtree.

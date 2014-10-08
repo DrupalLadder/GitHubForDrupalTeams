@@ -8,7 +8,7 @@ before your pull request gets merged.
 
 1. Before you make any changes, look at GitHub's network graph. Identify your
    branch on the graph, and see what it looks like in relation to Drupal Ladder's
-   master branch. See: https://github.com/<username>/_rhymessite/network. 
+   master branch. See: https://github.com/<username>/RhymesSite/network.
 
    Leave this open in a tab for reference at the end of this exercise.
 
@@ -62,7 +62,7 @@ before your pull request gets merged.
 1. If you have not already, go take a look at your pull requests. Then, in a new
    tab, revisit your network graph and compare it to the network graph you
    loaded at the beginning of the exercise.
-   https://github.com/<username>/_rhymessite/network.
+   https://github.com/<username>/RhymesSite/network.
 
    Read the network graph like this:
 

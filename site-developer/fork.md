@@ -4,15 +4,15 @@ Site Developer: Forking
 Create a personal "fork" of the site repo on GitHub. Do some work and save it
 there.
 
-1. Log into GitHub. Go to https://github.com/drupalladder/_rhymessite. Then
+1. Log into GitHub. Go to https://github.com/drupalladder/RhymesSite. Then
    creat your own copy by clicking "Fork".
 
 1. You already have a copy of _rhymesite locally. You do not need a new copy.
    Just add a new remote that points to your fork.
 
         # Add a new remote.
-        cd path/to/_rhymessite
-        git remote add <my-user-name> https://github.com/<my-user-name>/_rhymessite.git
+        cd path/to/RhymesSite
+        git remote add <my-user-name> https://github.com/<my-user-name>/RhymesSite.git
 
 1. Working with multiple remotes can get confusing when remote names like
    "origin" mean different things in different copies of the same code base. To
