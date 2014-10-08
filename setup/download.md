@@ -1,9 +1,9 @@
-Setup
------
+Setup: Download/Install/Register projects listed below
+------------------------------------------------------
 
 Example code, fork these on GitHub:
 
-  - [Rhyme site repo (for site developer exercises)](https://github.com/DrupalLadder/_rhymesite)
+  - [RhymesSite repo (for site developer exercises)](https://github.com/DrupalLadder/_rhymesite)
   - [Rhymes Distro repo (for project maintainers and release masters)](https://github.com/DrupalLadder/rhymesdistro)
   - [Rhymes module repo (for project maintainers and release masters)](https://github.com/DrupalLadder/rhymes)
 
@@ -24,7 +24,7 @@ Project maintainers managing contrib projects inside a site repo need:
   - [Git subtree](https://github.com/git/git/tree/master/contrib/subtree) (Tip: Install on Mac via Homebrew)
   - [Drush Subtree](http://github.com/whitehouse/drushsubtree) (optional, only works with Drush master/7.x branch)
 
-Release masters need:
+Release masters preparing production builds from versioned external projects need:
 
   - Drush versions:
     - [5.x patched here](per https://github.com/bryanhirsch/drush/tree/5.x) (patch pending [#836](https://github.com/drush-ops/drush/issues/836))

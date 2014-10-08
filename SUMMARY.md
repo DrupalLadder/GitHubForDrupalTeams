@@ -1,14 +1,16 @@
 # Summary
 
 * [Getting started](setup/README.md)
-    * [Setup](setup/setup.md)
+    * [Download](setup/download.md)
     * [Directory overview](setup/directory-overview.md)
+    * [Site Setup](setup/site-setup.md)
 * [Site Developer](site-developer/README.md)
-    * [Site Setup](site-developer/site-setup.md)
+    * [Reset](site-developer/reset.md)
     * [Fork](site-developer/fork.md)
     * [Pull request](site-developer/pull-request.md)
     * [Rebase](site-developer/rebase.md)
     * [Interactive Rebase](site-developer/rebase-interactive.md)
+    * [Resolve merge conflicts](site-developer/merge-conflicts.md)
 * [Project maintainer](project-maintainer/README.md)
     * [Git subtree push](project-maintainer/git-subtree-push.md)
     * [Git subtree pull](project-maintainer/git-subtree-pull.md)
