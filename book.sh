@@ -1,6 +1,6 @@
 #!/bin/bash
 rm -r ./*
-git checkout user-stories -- _book
+git checkout master -- _book
 mv _book/* ./
 rm -r _book
 git checkout -- book.sh
