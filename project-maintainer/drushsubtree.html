@@ -13,7 +13,7 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../project-maintainer/drushsubtree-utilities.html" />
+        <link rel="next" href="../release-master/README.html" />
         
         
         <link rel="prev" href="../project-maintainer/git-subtree-pull.html" />
@@ -36,7 +36,7 @@
     </head>
     <body>
         
-    <div class="book"  data-level="3.3" data-basepath=".." data-revision="1412812389908">
+    <div class="book"  data-level="3.4" data-basepath=".." data-revision="1412822514508">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -203,26 +203,26 @@
                             
                         </li>
                     
-                        <li  data-level="3.2" data-path="project-maintainer/git-subtree-pull.html">
+                        <li  data-level="3.2" data-path="project-maintainer/git-subtree-add.html">
+                            
+                            <a href="../project-maintainer/git-subtree-add.html">
+                                <i class="fa fa-check"></i> <b>3.2.</b> Git subtree add
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="project-maintainer/git-subtree-pull.html">
                             
                             <a href="../project-maintainer/git-subtree-pull.html">
-                                <i class="fa fa-check"></i> <b>3.2.</b> Git subtree pull
+                                <i class="fa fa-check"></i> <b>3.3.</b> Git subtree pull
                             </a>
                             
                         </li>
                     
-                        <li  data-level="3.3" data-path="project-maintainer/drushsubtree.html">
+                        <li  data-level="3.4" data-path="project-maintainer/drushsubtree.html">
                             
                             <a href="../project-maintainer/drushsubtree.html">
-                                <i class="fa fa-check"></i> <b>3.3.</b> Drush Subtree
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.4" data-path="project-maintainer/drushsubtree-utilities.html">
-                            
-                            <a href="../project-maintainer/drushsubtree-utilities.html">
-                                <i class="fa fa-check"></i> <b>3.4.</b> Drush Subtree utilities
+                                <i class="fa fa-check"></i> <b>3.4.</b> Drush Subtree
                             </a>
                             
                         </li>
@@ -308,7 +308,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 66.66666666666667%;min-width: 62.96296296296296%;"></div>
+        <div class="inner" style="width: 70.37037037037037%;min-width: 66.66666666666667%;"></div>
     </div>
     <div class="chapters">
     
@@ -346,11 +346,11 @@
     
         <a href="../project-maintainer/git-subtree-push.html" title="Git subtree push" class="chapter done " data-progress="3.1" style="left: 59.25925925925926%;"></a>
     
-        <a href="../project-maintainer/git-subtree-pull.html" title="Git subtree pull" class="chapter done " data-progress="3.2" style="left: 62.96296296296296%;"></a>
+        <a href="../project-maintainer/git-subtree-add.html" title="Git subtree add" class="chapter done " data-progress="3.2" style="left: 62.96296296296296%;"></a>
     
-        <a href="../project-maintainer/drushsubtree.html" title="Drush Subtree" class="chapter done " data-progress="3.3" style="left: 66.66666666666667%;"></a>
+        <a href="../project-maintainer/git-subtree-pull.html" title="Git subtree pull" class="chapter done " data-progress="3.3" style="left: 66.66666666666667%;"></a>
     
-        <a href="../project-maintainer/drushsubtree-utilities.html" title="Drush Subtree utilities" class="chapter  " data-progress="3.4" style="left: 70.37037037037037%;"></a>
+        <a href="../project-maintainer/drushsubtree.html" title="Drush Subtree" class="chapter done " data-progress="3.4" style="left: 70.37037037037037%;"></a>
     
         <a href="../release-master/README.html" title="Release master" class="chapter  new-chapter" data-progress="4" style="left: 74.07407407407408%;"></a>
     
@@ -373,7 +373,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2">
+                    <section class="normal" id="section-gitbook_3">
                     
                         <h2 id="project-maintainer-drush-subtree">Project Maintainer: Drush Subtree</h2>
 <p>Simplify working with git-subtree by using Drush Subtree to help manage subtree
@@ -430,6 +430,16 @@ one.</p>
  # and some additional faux commands and utilities helpful for working
  # with subtrees. To see a full list of available commands do this.
  drush --filter=drushsubtree
+
+ # The verbose flag shows you what Drush Subtree is doing under the hood.
+ # It&#39;s just a wrapper around git-subtree. Try these:
+ drush subtree-pull rhymes -v
+ drush subtree-push rhymes -v
+
+ # If your fingers are used to git-subtree commands, these might feel
+ # more familiar. Drush subtree supports this too:
+ drush subtree pull rhymes
+ drush subtree push rhymes
 </code></pre></li>
 </ol>
 
@@ -444,7 +454,7 @@ one.</p>
         <a href="../project-maintainer/git-subtree-pull.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../project-maintainer/drushsubtree-utilities.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../release-master/README.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

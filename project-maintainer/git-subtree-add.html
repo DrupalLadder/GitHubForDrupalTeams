@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Pull request | GitHub workflows for Drupal site development</title>
+        <title>Git subtree add | GitHub workflows for Drupal site development</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../site-developer/rebase.html" />
+        <link rel="next" href="../project-maintainer/git-subtree-pull.html" />
         
         
-        <link rel="prev" href="../site-developer/development.html" />
+        <link rel="prev" href="../project-maintainer/git-subtree-push.html" />
         
 
-        <meta property="og:title" content="Pull request | GitHub workflows for Drupal site development">
+        <meta property="og:title" content="Git subtree add | GitHub workflows for Drupal site development">
         <meta property="og:site_name" content="GitHub workflows for Drupal site development">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -36,7 +36,7 @@
     </head>
     <body>
         
-    <div class="book"  data-level="2.5" data-basepath=".." data-revision="1412822514508">
+    <div class="book"  data-level="3.2" data-basepath=".." data-revision="1412822514508">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -308,7 +308,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 37.03703703703704%;min-width: 33.333333333333336%;"></div>
+        <div class="inner" style="width: 62.96296296296296%;min-width: 59.25925925925926%;"></div>
     </div>
     <div class="chapters">
     
@@ -334,19 +334,19 @@
     
         <a href="../site-developer/pull-request.html" title="Pull request" class="chapter done " data-progress="2.5" style="left: 37.03703703703704%;"></a>
     
-        <a href="../site-developer/rebase.html" title="Rebase" class="chapter  " data-progress="2.6" style="left: 40.74074074074074%;"></a>
+        <a href="../site-developer/rebase.html" title="Rebase" class="chapter done " data-progress="2.6" style="left: 40.74074074074074%;"></a>
     
-        <a href="../site-developer/rebase-interactive.html" title="Interactive Rebase" class="chapter  " data-progress="2.7" style="left: 44.44444444444444%;"></a>
+        <a href="../site-developer/rebase-interactive.html" title="Interactive Rebase" class="chapter done " data-progress="2.7" style="left: 44.44444444444444%;"></a>
     
-        <a href="../site-developer/merge-conflicts.html" title="Resolve merge conflicts" class="chapter  " data-progress="2.8" style="left: 48.148148148148145%;"></a>
+        <a href="../site-developer/merge-conflicts.html" title="Resolve merge conflicts" class="chapter done " data-progress="2.8" style="left: 48.148148148148145%;"></a>
     
-        <a href="../site-developer/useful-commands.html" title="Useful commands" class="chapter  " data-progress="2.9" style="left: 51.851851851851855%;"></a>
+        <a href="../site-developer/useful-commands.html" title="Useful commands" class="chapter done " data-progress="2.9" style="left: 51.851851851851855%;"></a>
     
-        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter  new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
+        <a href="../project-maintainer/README.html" title="Project maintainer" class="chapter done new-chapter" data-progress="3" style="left: 55.55555555555556%;"></a>
     
-        <a href="../project-maintainer/git-subtree-push.html" title="Git subtree push" class="chapter  " data-progress="3.1" style="left: 59.25925925925926%;"></a>
+        <a href="../project-maintainer/git-subtree-push.html" title="Git subtree push" class="chapter done " data-progress="3.1" style="left: 59.25925925925926%;"></a>
     
-        <a href="../project-maintainer/git-subtree-add.html" title="Git subtree add" class="chapter  " data-progress="3.2" style="left: 62.96296296296296%;"></a>
+        <a href="../project-maintainer/git-subtree-add.html" title="Git subtree add" class="chapter done " data-progress="3.2" style="left: 62.96296296296296%;"></a>
     
         <a href="../project-maintainer/git-subtree-pull.html" title="Git subtree pull" class="chapter  " data-progress="3.3" style="left: 66.66666666666667%;"></a>
     
@@ -373,58 +373,29 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_17">
+                    <section class="normal" id="section-gitbook_4">
                     
-                        <h2 id="site-developer-pull-request">Site Developer: Pull request</h2>
-<p>Submit your work for peer review as a &quot;pull request&quot;.</p>
-<p>Your changes currently live here:
-<a href="https://github.com/username/RhymesSite" target="_blank">https://github.com/username/RhymesSite</a></p>
-<p>You want to submit your work for peer review, to be merged into the Drupal
-Ladder&#39;s master branch here:
-<a href="https://github.com/drupalladder/RhymesSite" target="_blank">https://github.com/drupalladder/RhymesSite</a></p>
-<p>In GitHub lingo, a request to merge changes from one user&#39;s branch into
-another user&#39;s branch is called a &quot;pull request&quot;.</p>
+                        <h2 id="project-maintainer-git-subtree-add">Project Maintainer: Git subtree add</h2>
+<p>Add a subtree project to a site repo.</p>
+<p>(Rhymes module, which is used for working examples, is already added as a
+subtree project. Below is a generic overview for adding additional subtree
+projects.)</p>
 <ol>
-<li><p>Create a pull request.</p>
-<p> Follow GitHub&#39;s instructions for submitting a pull request here:
- <a href="https://help.github.com/articles/creating-a-pull-request" target="_blank">https://help.github.com/articles/creating-a-pull-request</a></p>
-<p> Tip: When you submit your pull request, be sure to submit your pull request
- from and to here:</p>
-<p> FROM: username/my-new-rhyme</p>
-<p> TO: drupalladder/master</p>
-</li>
-<li><p>Peer review.</p>
-<p> Ask a someone else to find your pull request here:
- <a href="https://github.com/drupalladder/rhymessite/pulls" target="_blank">https://github.com/drupalladder/rhymessite/pulls</a></p>
-<p> Try all these different handy tricks for code reviewing someone&#39;s pull
- request and providing feedback:</p>
-<ul>
-<li>Find your pull request here: github.com/drupalladder/RhymesSite/pulls</li>
-<li>Use GitHub&#39;s GUI to review the pull request commit-by-commit<ul>
-<li>Comment on a line of code</li>
-<li>Comment on an entire commit</li>
-</ul>
-</li>
-<li>Use GitHub&#39;s GUI to review all the files changed in their final state, all
-at once<ul>
-<li>Comment on a line of code</li>
-<li>Comment on the entire pull request</li>
-</ul>
-</li>
-<li>Find GitHub indicators about the status of the pull request you&#39;re
-looking at:<ul>
-<li>Is the pull request open or closed? (see
-<a href="https://github.com/drupalladder/RhymesSite/pulls" target="_blank">https://github.com/drupalladder/RhymesSite/pulls</a>)</li>
-<li>Can this pull request be merged automatically? (See
-<a href="https://github.com/drupalladder/RhymesSite/pull/" target="_blank">https://github.com/drupalladder/RhymesSite/pull/</a><number>, is the button
-at the bottom gray or green? If it&#39;s green, there will be no merge
-conflicts and you can merge throught the GUI if you want. If it&#39;s gray,
-GitHub anticipates conflicts, which must be resolved locally before you
-merge.)</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><p>If the project you&#39;re adding as a subtree started it&#39;s life as a custom
+module inside the <em>projects</em> directory, you&#39;ll need to remove it, then re-add
+it.</p>
+<pre><code> # Make sure all your work is saved.
+ cd path/to/RhymesSite
+ git subtree push --prefix=projects/mymodule https://github.com/username/mymodule master
+
+ # Remove the old not-subtree copy of the project.
+ git rm -r projects/mymodule
+ git commit -um &#39;Removed mymodule. To be re-added as subtree project.&#39;
+</code></pre></li>
+<li><p>Now (re)add mymodule as a subtree project.</p>
+<pre><code> # (Re)Add mymodule as a subtree project
+ git subtree add --prefix=projects/mymodule https://github.com/username/mymodule master
+</code></pre></li>
 </ol>
 
                     
@@ -435,10 +406,10 @@ merge.)</li>
         </div>
 
         
-        <a href="../site-developer/development.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../project-maintainer/git-subtree-push.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../site-developer/rebase.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../project-maintainer/git-subtree-pull.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
