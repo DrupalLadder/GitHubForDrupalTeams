@@ -58,4 +58,13 @@ projects in site repos.
         # with subtrees. To see a full list of available commands do this.
         drush --filter=drushsubtree
 
+        # The verbose flag shows you what Drush Subtree is doing under the hood.
+        # It's just a wrapper around git-subtree. Try these:
+        drush subtree-pull rhymes -v
+        drush subtree-push rhymes -v
 
+        # If your fingers are used to git-subtree commands, these might feel
+        # more familiar. Drush subtree supports this too:
+        drush subtree pull rhymes
+        drush subtree push rhymes
+ 
