@@ -3,7 +3,7 @@ Setup: Download/Install/Register projects listed below
 
 Example code, fork these on GitHub:
 
-  - [RhymesSite repo (for site developer exercises)](https://github.com/DrupalLadder/_rhymesite)
+  - [RhymesSite repo (for site developer exercises)](https://github.com/DrupalLadder/RhymeSite)
   - [Rhymes Distro repo (for project maintainers and release masters)](https://github.com/DrupalLadder/rhymesdistro)
   - [Rhymes module repo (for project maintainers and release masters)](https://github.com/DrupalLadder/rhymes)
 

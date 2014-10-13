@@ -20,6 +20,7 @@
     * [Git subtree pull](project-maintainer/git-subtree-pull.md)
     * [Drush Subtree](project-maintainer/drushsubtree.md)
 * [Release master UNFINISHED, WORK IN PROGRESS](release-master/README.md) (UNFINISHED: Work in progress)
+    * [Verifying versioned components](release-master/verify-versioned-components.md)
     * [Directory structure](release-master/directory-structure.md)
     * [Pre-build steps](release-master/prebuild.md) 
     * [Build steps](release-master/build.md) 
