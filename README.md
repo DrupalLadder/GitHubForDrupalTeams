@@ -5,4 +5,4 @@ GitHub workflows for Drupal site development
   ![Screen](https://octodex.github.com/images/drupalcat.jpg)
 </div>
 
-**Note:** This book has been generated using [GitBook](http://www.gitbook.io). Contributions welcome [here](https://github.com/DrupalLadder/gitworkflow).
+**Note:** This book has been generated using [GitBook](http://www.gitbook.io). Contributions welcome [here](https://github.com/DrupalLadder/GitHubForDrupalTeams).
