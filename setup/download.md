@@ -28,7 +28,6 @@ Release masters preparing production builds from versioned external projects nee
 
   - Drush versions:
     - [5.x patched here](per https://github.com/bryanhirsch/drush/tree/5.x) (patch pending [#836](https://github.com/drush-ops/drush/issues/836))
-    - [6.x patched here](https://github.com/bryanhirsch/drush/tree/6.x) (patch pending [#834](https://github.com/drush-ops/drush/issues/834))
+    - [6.x](https://github.com/drush-ops/drush/tree/6.x)
     - [7.x/master](https://github.com/drush-ops/drush/tree/master)
   - Some familiarity with [Drush Make](https://github.com/drush-ops/drush/blob/master/docs/make.txt)
-  - [Build Manager](https://github.com/whitehouse/buildmanager) (optional/experimental, requires Drush 7.x)
